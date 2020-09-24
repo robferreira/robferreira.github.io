@@ -18,7 +18,7 @@ var data = [	{
 	},
 	{
 		tag: 'p',
-		content: 'collaborate in the development of the data platform, including data governance'
+		content: 'Collaborate in the development of the data platform, including data governance'
 	}]
 },
 	{
