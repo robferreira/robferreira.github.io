@@ -1,8 +1,9 @@
 //Json Object
+var pathImgs = 'images/social_media/';
 
 var listSocialMedia = [{
     name: 'Instagram',
-    img: 'images/social_media/instagram.png',
+    img: pathImgs + 'instagram.png',
     link: 'https://bit.ly/33Y98fu',
     target: '_blank',
     tooltip: 'tooltip',
@@ -10,7 +11,7 @@ var listSocialMedia = [{
     height: '20'
 }, {
     name: 'Youtube',
-    img: 'images/social_media/youtube.png',
+    img: pathImgs + 'youtube.png',
     link: 'https://bit.ly/3j1yAHw',
     target: '_blank',
     tooltip: 'tooltip',
@@ -18,7 +19,7 @@ var listSocialMedia = [{
     height: '20'
 }, {
     name: 'Linkedin',
-    img: 'images/social_media/linkedin.png',
+    img: pathImgs + 'linkedin.png',
     link: 'https://bit.ly/3cubLK6',
     target: '_blank',
     tooltip: 'tooltip',
@@ -26,7 +27,7 @@ var listSocialMedia = [{
     height: '20'
 }, {
     name: 'Medium',
-    img: 'images/social_media/medium.png',
+    img: pathImgs + 'medium.png',
     link: 'https://bit.ly/3kISWFU',
     target: '_blank',
     tooltip: 'tooltip',
@@ -34,7 +35,7 @@ var listSocialMedia = [{
     height: '20'
 }, {
     name: 'Github',
-    img: 'images/social_media/github.png',
+    img: pathImgs + 'github.png',
     link: 'https://bit.ly/3cp5U8G',
     target: '_blank',
     tooltip: 'tooltip',
@@ -42,7 +43,7 @@ var listSocialMedia = [{
     height: '20'
 }, {
     name: 'Bar',
-    img: 'images/social_media/bar.png',
+    img: pathImgs + 'bar.png',
     link: '',
     target: '',
     tooltip: '',
@@ -50,7 +51,7 @@ var listSocialMedia = [{
     height: '20'
 }, {
     name: 'Visualizar/baixar Curriculo',
-    img: 'images/social_media/curriculum-vitae.png',
+    img: pathImgs + 'curriculum-vitae.png',
     link: 'https://bit.ly/curriculo-jose-robinson',
     target: '_blank',
     tooltip: 'tooltip',
@@ -58,7 +59,7 @@ var listSocialMedia = [{
     height: '30'
 }, {
     name: 'Visualizar/baixar Profile',
-    img: 'images/social_media/headhunting.png',
+    img: pathImgs + 'headhunting.png',
     link: 'https://bit.ly/profile-jose-robinson',
     target: '_blank',
     tooltip: 'tooltip',
