@@ -52,7 +52,7 @@ var listSocialMedia = [{
 }, {
     name: 'Visualizar/baixar Curriculo',
     img: pathImgs + 'curriculum-vitae.png',
-    link: 'https://bit.ly/curriculo-jose-robinson',
+    link: 'http://bit.ly/cv-jose-robinson',
     target: '_blank',
     tooltip: 'tooltip',
     width: '30',
