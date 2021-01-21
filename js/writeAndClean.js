@@ -1,19 +1,19 @@
 var div = document.getElementById('log');
-var textos = ['Big Data', 'Fast Data'];
+var texts = ['Big Data', 'Fast Data'];
 
-function escrever(str, done) {
+function write(str, done) {
     var char = str.split('').reverse();
     var typer = setInterval(function() {
         if (!char.length) {
             clearInterval(typer);
-            return setTimeout(done, 1000); 
+            return setTimeout(done, 1000);
         }
         var next = char.pop();
         div.innerHTML += next;
     }, 100);
 }
 
-function limpar(done) {
+function clean(done) {
     var char = div.innerHTML;
     var nr = char.length;
     var typer = setInterval(function() {
@@ -25,16 +25,17 @@ function limpar(done) {
     }, 100);
 }
 
-function rodape(conteudos, el) {
+function footer(conteudos, el) {
     var atual = -1;
-    function prox(cb){
+
+    function next(cb) {
         if (atual < conteudos.length - 1) atual++;
         else atual = 0;
         var str = conteudos[atual];
-        escrever(str, function(){
-            limpar(prox);
+        write(str, function() {
+            clean(next);
         });
     }
-    prox(prox);
+    next(next);
 }
-rodape(textos);
+footer(texts);
