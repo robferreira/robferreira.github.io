@@ -378,8 +378,15 @@ a:hover, a:focus {
   margin-bottom: 2rem;
 }
 
-#about-section .pillars-carousel {
+#about-section .pillars-carousel-shell {
+  position: relative;
   margin-top: 0.5rem;
+  overflow: visible;
+}
+
+#about-section .pillars-carousel {
+  margin-top: 0;
+  overflow: visible;
 }
 
 #about-section .pillars-carousel.owl-carousel .owl-item {
@@ -393,56 +400,47 @@ a:hover, a:focus {
 
 #about-section .pillars-carousel .owl-stage-outer {
   padding: 0.25rem 0 0.5rem;
+  touch-action: pan-x pan-y;
+  cursor: grab;
 }
 
-#about-section .pillars-carousel .owl-nav button.owl-prev,
-#about-section .pillars-carousel .owl-nav button.owl-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: rgba(17, 27, 46, 0.85) !important;
-  border: 1px solid var(--glass-border) !important;
-  color: var(--accent) !important;
-  font-size: 18px;
-  line-height: 1;
+#about-section .pillars-carousel.owl-grab .owl-stage-outer {
+  cursor: grabbing;
+}
+
+#about-section .pillars-carousel .owl-item {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#about-section .pillars-carousel .owl-item:not(.active) .pillar-card {
+  opacity: 0.72;
+}
+
+#about-section .pillars-carousel .owl-item.active .pillar-card {
+  opacity: 1;
+}
+
+#about-section .pillars-carousel-dots {
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-}
-
-#about-section .pillars-carousel .owl-nav button.owl-prev:hover,
-#about-section .pillars-carousel .owl-nav button.owl-next:hover {
-  background: rgba(59, 130, 246, 0.2) !important;
-  color: var(--text) !important;
-  border-color: var(--accent) !important;
-}
-
-#about-section .pillars-carousel .owl-nav button.owl-prev {
-  left: -12px;
-}
-
-#about-section .pillars-carousel .owl-nav button.owl-next {
-  right: -12px;
-}
-
-#about-section .pillars-carousel .owl-dots {
+  gap: 0.5rem;
   margin-top: 1rem;
 }
 
-#about-section .pillars-carousel .owl-dots .owl-dot span {
+#about-section .pillars-carousel-dot {
   width: 8px;
   height: 8px;
-  margin: 4px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
   background: var(--text-muted);
+  cursor: pointer;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
-#about-section .pillars-carousel .owl-dots .owl-dot.active span,
-#about-section .pillars-carousel .owl-dots .owl-dot:hover span {
+#about-section .pillars-carousel-dot.is-active,
+#about-section .pillars-carousel-dot:hover {
   background: var(--accent);
   transform: scale(1.15);
 }
@@ -1345,14 +1343,6 @@ a:hover, a:focus {
     padding-left: 15px !important;
   }
 
-  #about-section .pillars-carousel .owl-nav button.owl-prev {
-    left: 0;
-  }
-
-  #about-section .pillars-carousel .owl-nav button.owl-next {
-    right: 0;
-  }
-
   #about-section .img-about,
   #about-section .img-about .img {
     min-height: 320px;
@@ -1484,6 +1474,18 @@ a:hover, a:focus {
 
   .glass-card {
     padding: 1rem;
+  }
+
+  #about-section .pillars-carousel .pillar-card {
+    padding: 1rem;
+  }
+
+  #about-section .pillars-carousel .pillar-card h3 {
+    font-size: 1rem;
+  }
+
+  #about-section .pillars-carousel .pillar-card p {
+    font-size: 0.875rem;
   }
 
   .experience-modal-content .modal-dialog {
