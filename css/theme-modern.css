@@ -381,44 +381,46 @@ a:hover, a:focus {
 #about-section .pillars-carousel-shell {
   position: relative;
   margin-top: 0.5rem;
-  overflow: visible;
 }
 
-#about-section .pillars-carousel {
-  margin-top: 0;
-  overflow: visible;
+#about-section .pillars-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: 0;
+  padding: 0.25rem 0 0.5rem;
 }
 
-#about-section .pillars-carousel.owl-carousel .owl-item {
-  opacity: 1;
+#about-section .pillars-scroll::-webkit-scrollbar {
+  display: none;
 }
 
-#about-section .pillars-carousel .pillar-card {
+#about-section .pillars-page {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+#about-section .pillars-page--last {
+  grid-template-columns: 1fr 1fr;
+}
+
+#about-section .pillars-page--last .pillar-card {
+  grid-column: 1;
+}
+
+#about-section .pillars-page .pillar-card {
   height: 100%;
   margin: 0;
-}
-
-#about-section .pillars-carousel .owl-stage-outer {
-  padding: 0.25rem 0 0.5rem;
-  touch-action: pan-x pan-y;
-  cursor: grab;
-}
-
-#about-section .pillars-carousel.owl-grab .owl-stage-outer {
-  cursor: grabbing;
-}
-
-#about-section .pillars-carousel .owl-item {
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-#about-section .pillars-carousel .owl-item:not(.active) .pillar-card {
-  opacity: 0.72;
-}
-
-#about-section .pillars-carousel .owl-item.active .pillar-card {
-  opacity: 1;
+  min-width: 0;
 }
 
 #about-section .pillars-carousel-dots {
@@ -1476,15 +1478,15 @@ a:hover, a:focus {
     padding: 1rem;
   }
 
-  #about-section .pillars-carousel .pillar-card {
+  #about-section .pillars-page .pillar-card {
     padding: 1rem;
   }
 
-  #about-section .pillars-carousel .pillar-card h3 {
+  #about-section .pillars-page .pillar-card h3 {
     font-size: 1rem;
   }
 
-  #about-section .pillars-carousel .pillar-card p {
+  #about-section .pillars-page .pillar-card p {
     font-size: 0.875rem;
   }
 
