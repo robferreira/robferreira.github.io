@@ -2,24 +2,21 @@
 <html lang="en">
 
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179071470-1"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VFWH539SGC"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'UA-179071470-1');
+        gtag('config', 'G-VFWH539SGC');
     </script>
 
     <title>Robinson Ferreira</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -35,253 +32,205 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/theme-modern.css">
+    <link rel="icon" type="image/png" href="images/logo-robinson-ferreira.png" />
+    <link rel="shortcut icon" href="images/logo-robinson-ferreira.png" />
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="#home-section"><img src="images/logo-robinson-ferreira-bg-white.png" alt="Robinson Ferreira" width="70" height="70"></a>
+            <a class="navbar-brand" href="#home-section"><img src="images/logo-robinson-ferreira.png" alt="Robinson Ferreira" width="70" height="70"></a>
             <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu" style="font-size: 30px;"></span>
+                <span class="oi oi-menu"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav nav ml-auto d-flex no-gutters align-items-center justify-content-center" id="menu">
                 </ul>
-                <div class="col-md-4 d-flex no-gutters align-items-center justify-content-center" style="display:table-cell; vertical-align:middle; text-align:center;" id="socialMedia">
+                <span class="navbar-divider" aria-hidden="true"></span>
+                <div class="d-flex no-gutters align-items-center justify-content-center" id="socialMedia">
+                </div>
+                <div id="lang-switcher" class="lang-switcher d-flex flex-column align-items-center">
+                    <button type="button" data-lang="pt" aria-label="Português">PT</button>
+                    <button type="button" data-lang="en" aria-label="English">EN</button>
                 </div>
             </div>
         </div>
     </nav>
-    <section id="home-section" class="hero" style="height: 100vh;">
-        <div class="home-slider  owl-carousel">
-            <div class="slider-item">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-                        <div class="one-third order-md-last img" style="background-image:url(images/robinson_ferreira.jpg);">
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                            <div style="color: #000000;font-weight: 800;">
-                                <h1 class="mb-4 mt-6">Robinson Ferreira </h1>
-                                <p>
-                                    <a class="btn-custom" style="border-color: #000000;color: #000000;">
-                                        <b>Solutions Analyst </b><b id="log"></b>
-                                    </a>
-                                </p>
-                                <p class="align-items-center desc-home-light" id="desc-home"><b>
-                                        Hello, I'm <a id="my-age"></a> years old, I've worked in the IT area since 2012
-                                        and focused on Big Data
-                                        since April 2016, working in large companies in the financial segment.
-                                    </b></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+    <section id="home-section" class="hero hero-modern">
+        <div class="hero-bg-photo" aria-hidden="true">
+            <img src="images/hero-profile.png" alt="" width="1024" height="576" decoding="async" fetchpriority="high">
+        </div>
+        <div class="hero-bg-overlay" aria-hidden="true"></div>
+        <div class="container hero-content">
+            <div class="hero-copy">
+                <h1 class="ftco-animate">Robinson Ferreira</h1>
+                <p class="hero-role ftco-animate">
+                    <span data-i18n="hero.role">Advanced Analytics e IA</span>
+                    <span class="hero-typewriter-sep">·</span>
+                    <span id="log" class="hero-typewriter"></span>
+                </p>
+                <p class="ftco-animate" id="desc-home" data-i18n="hero.bio" data-i18n-html="true">Hoje lidero Advanced Analytics e IA na Cielo, atuando com IA generativa, componentes reutilizáveis, arquiteturas de referência, segurança e performance. Minha experiência em dados e Big Data, desde 2016, sustenta essa atuação no setor financeiro.</p>
             </div>
         </div>
     </section>
 
-    <section class="ftco-about ftco-counter img ftco-section" id="about-section" style="margin-top: 25vh;">
+    <section class="ftco-about ftco-section section-dark" id="about-section">
         <div class="container">
-            <div class="row d-flex">
-                <div class="col-md-6 col-lg-5 d-flex">
-                    <div class="img-about img d-flex align-items-stretch">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-6 col-lg-5 d-flex mb-4 mb-md-0">
+                    <div class="img-about img d-flex align-items-stretch w-100">
                         <div class="overlay"></div>
-                        <div class="img d-flex align-self-stretch align-items-center" style="background-image:url(images/about-robinson_ferreira.jpg);">
+                        <div class="img d-flex align-self-stretch align-items-center w-100" style="background-image:url(images/about-profile.png);">
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-7 pl-lg-5 py-5">
-                    <div class="row justify-content-start pb-3">
-                        <div class="col-md-12 heading-section ftco-animate">
-                            <span class="subheading">Welcome</span>
-                            <h2 class="mb-4" style="font-size: 34px; text-transform: capitalize;">About Me</h2>
-                            <p>Graduated in Information Systems (Bachelor), where he ended in 12/2015, I have a good experience with the system user, I like to be updated about what's new in technology and also other subjects, I always look for get the best
-                                knowledge in my areas of interest and thus use effective way, passionate about development and data.</p>
-
-                            <p>
-                                I like music a lot, where I practice since I was 12 years old, with string instruments, like guitar, ukulele and others, I love the investment area, although it started recently, since 2016 it is something that I have studied a lot and practiced since
-                                the beginning from “skin in game” studies, I love playing sports, I skated "street sport" for a few years, I always liked to play ball and go to the gym.
-                            </p>
-                        </div>
+                <div class="col-md-6 col-lg-7 pl-lg-5">
+                    <div class="about-intro heading-section ftco-animate">
+                        <span class="subheading" data-i18n="about.subheading">Welcome</span>
+                        <h2 class="mb-4" data-i18n="about.title">About Me</h2>
+                        <p data-i18n="about.p1">Sou formado em Sistemas de Informação desde dezembro de 2015. Ao longo da minha carreira, sempre trabalhei próximo aos usuários, entendendo suas necessidades, solucionando problemas e transformando demandas em soluções práticas.</p>
+                        <p data-i18n="about.p2">Gosto de acompanhar as novidades do universo da tecnologia e estou sempre buscando novos conhecimentos para aplicá-los de forma efetiva nas áreas em que atuo. Tenho um perfil curioso e resolutivo: quando não sei algo, procuro aprender, compreender e encontrar a melhor solução. Sou especialmente apaixonado por desenvolvimento de software, dados e inteligência artificial.</p>
+                        <p data-i18n="about.p3">Fora do ambiente profissional, sou pai do Enrico e apaixonado por música. Toco instrumentos de corda desde os 12 anos, principalmente violão, guitarra e ukulele. Também me interesso por investimentos, tema que estudo e pratico desde 2016, sempre com "skin in the game".</p>
+                        <p data-i18n="about.p4">Os esportes também fazem parte da minha vida. Pratiquei patins street durante alguns anos, sempre gostei de jogar futebol e frequentar a academia e, atualmente, pratico muay thai.</p>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="media block-6 services d-block ftco-animate">
-                                <div class="icon"><span class="flaticon-analysis"></span></div>
-                                <div class="media-body">
-                                    <h3 class="heading mb-3">
-                                        Big Data Infrastructure</h3>
-                                    <p>First, I was assigned as a systems developer to facilitate the use of the Big Data platform (OpenBus), building and improving applications such as Big Data view, ACEP, Openbus Manager, Api Manager (WSO2), Camel among
-                                        others ...</p>
-                                </div>
+                    <div class="pillars-carousel-shell">
+                        <div class="pillars-carousel owl-carousel owl-theme">
+                            <div class="glass-card pillar-card">
+                                <div class="icon mb-3"><span class="flaticon-analysis"></span></div>
+                                <h3 class="heading mb-3" data-i18n="about.pillar1Title">Advanced Analytics & AI Leadership</h3>
+                                <p data-i18n="about.pillar1Text">I lead the Advanced Analytics and AI area, driving experimentation, development and adoption of artificial intelligence solutions with institutional impact.</p>
+                            </div>
+                            <div class="glass-card pillar-card">
+                                <div class="icon mb-3"><span class="flaticon-analysis"></span></div>
+                                <h3 class="heading mb-3" data-i18n="about.pillar2Title">Generative AI & Prototyping</h3>
+                                <p data-i18n="about.pillar2Text">I build PoCs, archetypes and reusable components that serve as a foundation for the entire organization, accelerating innovation with generative AI.</p>
+                            </div>
+                            <div class="glass-card pillar-card">
+                                <div class="icon mb-3"><span class="flaticon-analysis"></span></div>
+                                <h3 class="heading mb-3" data-i18n="about.pillar3Title">Architecture, Security & Performance</h3>
+                                <p data-i18n="about.pillar3Text">I define reference architectures and best practices, prioritizing security, performance and scalability in analytics and AI solutions.</p>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="media block-6 services d-block ftco-animate">
-                                <div class="icon"><span class="flaticon-analysis"></span></div>
-                                <div class="media-body">
-                                    <h3 class="heading mb-3">Big Data Architecture</h3>
-                                    <p>A new challenge where I worked helping to develop architectures when it came to Data (Fast Data and Batch), I continued to develop applications to facilitate Squads to better integrate with these platforms.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="media block-6 services d-block ftco-animate">
-                                <div class="icon"><span class="flaticon-analysis"></span></div>
-                                <div class="media-body">
-                                    <h3 class="heading mb-3">Data Engineering
-                                    </h3>
-                                    <p>
-                                        I joined the Engineering team with challenge of building a platform (Data Pipeline) to abstract the general bank intakes, bringing security and agility with DataOps, standardizing, the movements and transformations data, both FAST and BATCH and thus facilitating
-                                        the development of Squads.</p>
-                                </div>
-                            </div>
-                        </div>
+                        <div class="pillars-carousel-dots" role="tablist" aria-label="Cards de competências"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="ftco-section bg-light" id="skills-section">
+    <section class="ftco-section ftco-project section-alt" id="professional-experience">
         <div class="container">
             <div class="row justify-content-center pb-5">
                 <div class="col-md-12 heading-section text-center ftco-animate">
-                    <span class="subheading">Skills</span>
-                    <h2 class="mb-4">My Skills</h2>
-                    <p>Main skills acquired with working time</p>
+                    <span class="subheading" data-i18n="experience.subheading">Accomplishments</span>
+                    <h2 class="mb-4" data-i18n="experience.title">Professional experience</h2>
+                    <p data-i18n="experience.subtitle">Cada empresa teve um papel importante no meu desenvolvimento profissional e pessoal. Sou grato por todas as experiências, aprendizados e pessoas que fizeram parte dessa trajetória.</p>
                 </div>
             </div>
-            <div class="row" id="mySkills"></div>
-
-            <div class="row justify-content-center py-5 mt-5">
-                <div class="col-md-12 heading-section text-center ftco-animate">
-                    <span class="subheading">What I Do</span>
-                    <h2 class="mb-4">Strategy, design and a bit of magic</h2>
-                </div>
-            </div>
-
             <div class="row">
-                <div class="col-md-4 text-center d-flex ftco-animate">
-                    <div class="services-1">
-                        <span class="icon">
-                            <i class="flaticon-analysis"></i>
-                        </span>
-                        <div class="desc">
-                            <h3 class="mb-5"><a href="#">Explore</a></h3>
-                            <h6>
-                                Big data architecture, technical knowledge about tools (Kafka, Storm, Elasticsearch, dahsboards among others ...) and design of solutions.</h6>
-                            <h6>
-                                Data engineering for performance in data streams (Nifi, Python);
-                            </h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center d-flex ftco-animate">
-                    <div class="services-1">
-                        <span class="icon">
-                            <i class="flaticon-flasks"></i>
-                        </span>
-                        <div class="desc">
-                            <h3 class="mb-5"><a href="#">Create</a></h3>
-                            <h6>Development in languages, (Java, Typescript, Groovy, Javascript)</h6>
-                            <h6>Ability to understand business needs and design simple and objective solutions</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 text-center d-flex ftco-animate">
-                    <div class="services-1">
-                        <span class="icon">
-                            <i class="flaticon-ideas"></i>
-                        </span>
-                        <div class="desc">
-                            <h3 class="mb-5"><a href="#">Learn</a></h3>
-                            <h4>Prototyping</h4>
-                            <h4>User Testing</h4>
-                            <h4>UI Testing</h4>
-                        </div>
-                    </div>
-                </div>
+                <div class="col-12" id="myTimeline"></div>
             </div>
         </div>
     </section>
 
-    <section class="ftco-section ftco-project" id="professional-experience">
-        <div class="container">
-            <div class="row justify-content-center pb-5">
-                <div class="col-md-12 heading-section text-center ftco-animate">
-                    <span class="subheading">Accomplishments</span>
-                    <h2 class="mb-4">Professional experience</h2>
-                    <p>Each company is, and was of extreme importance in my development, professional and personal, I have them with great affection.</p>
+    <div class="modal fade" id="experienceModal" tabindex="-1" role="dialog" aria-labelledby="experienceModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content experience-modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="experienceModalTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-            </div>
-            <div class="row">
-                <div id="myTimeline">
-                </div>
+                <div class="modal-body" id="experienceModalBody"></div>
             </div>
         </div>
-    </section>
+    </div>
 
-
-    <section class="ftco-section bg-light" id="blog-section">
-        <div class="container">
-            <div class="row justify-content-center mb-5 pb-5">
-                <div class="col-md-7 heading-section text-center ftco-animate">
-                    <span class="subheading">Blog</span>
-                    <h2 class="mb-4">Our Blog</h2>
-                    <p>
-                        I like to write and share my knowledge, i use <b>Medium</b> to write my articles, here are some of them
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div id="medium-widget"></div>
-                <script src="https://medium-widget.pixelpoint.io/widget.js"></script>
-                <script>
-                    MediumWidget.Init({
-                        renderTo: '#medium-widget',
-                        params: {
-                            "resource": "https://medium.com/@robinson_ferreira",
-                            "postsPerLine": 4,
-                            "limit": 4,
-                            "picture": "small",
-                            "fields": ["description", "author", "claps", "likes"],
-                            "ratio": "square"
-                        }
-                    })
-                </script>
-            </div>
-        </div>
-    </section>
-
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <section class="ftco-section section-dark" id="blog-section">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section text-center ftco-animate">
-                    <span class="subheading">Contact</span>
-                    <h2 class="mb-4">Contact Me</h2>
-                    <p>
-                        In addition to social media, you can contact me through this form</p>
+                    <span class="subheading" data-i18n="blog.subheading">Blog</span>
+                    <h2 class="mb-4" data-i18n="blog.title">Artigos</h2>
+                    <p data-i18n="blog.subtitle">Compartilho aprendizados, experiências e reflexões sobre tecnologia, desenvolvimento de software, dados e inteligência artificial. Confira alguns dos conteúdos que publico no Medium.</p>
                 </div>
             </div>
 
-            <div class="row no-gutters block-9">
+            <div id="blog-loading" class="blog-loading" hidden>
+                <span class="blog-loading-spinner" aria-hidden="true"></span>
+            </div>
+
+            <div id="blog-empty" class="blog-empty" hidden>
+                <p data-i18n="blog.section.emptyText">Os artigos podem ser acessados diretamente no Medium.</p>
+                <a class="blog-btn blog-btn-primary" href="https://medium.com/@robinson_ferreira" target="_blank" rel="noopener noreferrer" data-i18n="blog.section.emptyCta">Ver artigos no Medium</a>
+            </div>
+
+            <div id="blog-grid" class="blog-grid" role="list" hidden></div>
+
+            <div class="blog-section-footer text-center">
+                <a class="blog-btn blog-btn-secondary" href="https://medium.com/@robinson_ferreira" target="_blank" rel="noopener noreferrer" data-i18n="blog.section.viewAll">Ver todos os artigos no Medium</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section contact-section ftco-no-pb section-alt" id="contact-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <span class="subheading" data-i18n="contact.subheading">Contact</span>
+                    <h2 class="mb-4" data-i18n="contact.title">Contact Me</h2>
+                    <p data-i18n="contact.subtitle">In addition to social media, you can reach me through this form.</p>
+                </div>
+            </div>
+
+            <div class="row contact-grid no-gutters">
                 <div class="col-md-6 order-md-last d-flex">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdbp1pU-AEDxmkRSYhd8cHUIoVlO8TF1mmOtDu0GLMv3YfTHg/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0" style="overflow: hidden;">Carregando…</iframe>
+                    <form id="contact-form" class="contact-form w-100" novalidate>
+                        <div class="contact-field">
+                            <label class="contact-label" for="contact-name" data-i18n="contact.form.nameLabel">Nome</label>
+                            <input type="text" id="contact-name" name="name" class="contact-input" autocomplete="name" data-i18n-placeholder="contact.form.namePlaceholder" placeholder="Como posso chamar você?">
+                        </div>
+
+                        <div class="contact-field">
+                            <label class="contact-label" for="contact-email" data-i18n="contact.form.emailLabel">E-mail</label>
+                            <input type="email" id="contact-email" name="email" class="contact-input" autocomplete="email" required aria-describedby="contact-email-error" data-i18n-placeholder="contact.form.emailPlaceholder" placeholder="seuemail@exemplo.com">
+                            <span id="contact-email-error" class="contact-error" role="alert" hidden></span>
+                        </div>
+
+                        <div class="contact-field">
+                            <label class="contact-label" for="contact-message" data-i18n="contact.form.messageLabel">Mensagem</label>
+                            <textarea id="contact-message" name="message" class="contact-textarea" rows="5" autocomplete="off" required aria-describedby="contact-message-error contact-message-count" data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Escreva sua mensagem..."></textarea>
+                            <span id="contact-message-count" class="contact-char-count" hidden></span>
+                            <span id="contact-message-error" class="contact-error" role="alert" hidden></span>
+                        </div>
+
+                        <div class="contact-honeypot" aria-hidden="true">
+                            <label for="contact-website">Website</label>
+                            <input type="text" id="contact-website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <div id="contact-form-status" class="contact-status" role="status" aria-live="off" tabindex="-1" hidden></div>
+
+                        <button type="submit" id="contact-submit" class="contact-submit" aria-busy="false">
+                            <span class="contact-submit-spinner" aria-hidden="true"></span>
+                            <span class="contact-submit-label" data-i18n="contact.form.submit">Enviar mensagem</span>
+                        </button>
+
+                        <p class="contact-privacy" data-i18n="contact.form.privacy">Seus dados serão utilizados somente para responder ao seu contato.</p>
+                    </form>
                 </div>
                 <div class="col-md-6 d-flex">
-                    <div class="img text-center" style="background-image: url(images/about.jpg);">
+                    <div class="img contact-image w-100" style="background-image: url(images/contact-profile.png);">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <footer class="ftco-footer ftco-section">
         <div class="container">
@@ -291,21 +240,18 @@
                         Copyright &copy;
                         <script>
                             document.write(new Date().getFullYear());
-                        </script> All rights reserved | <a href="https://robinsonferreira.com.br">Robinson Ferreira</a>
+                        </script> <span data-i18n="footer.rights">All rights reserved</span> | <a href="https://robinsonferreira.com.br">Robinson Ferreira</a>
                     </p>
                 </div>
             </div>
         </div>
     </footer>
 
-
-
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#0075f6" />
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#60a5fa" />
             <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-                stroke="#0075f6" /></svg></div>
-
+                stroke="#60a5fa" /></svg></div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -319,13 +265,21 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/scrollax.min.js"></script>
-    <script src="js/log.js"></script>
-    <script src="js/timeline/jquery-albe-timeline.js"></script>
+    <!-- i18n -->
+    <script src="js/i18n/translations.js"></script>
+    <script src="js/i18n/i18n.js"></script>
+    <!-- myCustom -->
+    <script src="js/writeAndClean.js"></script>
     <script src="js/timeline/data-albe-timeline.js"></script>
     <script src="js/myAge.js"></script>
-    <script src="js/skills.js"></script>
     <script src="js/social-media.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/blog/posts-data.js"></script>
+    <script src="js/blog/blog-card.js"></script>
+    <script src="js/blog/blog-preview.js"></script>
+    <script src="js/config/contact.config.js"></script>
+    <script src="js/contact-form.js"></script>
+    <!-- myCustom -->
     <script src="js/main.js"></script>
 
 </body>

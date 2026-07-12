@@ -43,41 +43,46 @@
 
 
    // Burger Menu
+	var SCROLL_OFFSET = 80;
+
 	var burgerMenu = function() {
+		var $nav = $('#ftco-nav');
+		var $toggle = $('.js-fh5co-nav-toggle');
 
-		$('body').on('click', '.js-fh5co-nav-toggle', function(event){
-
-			event.preventDefault();
-
-			if ( $('#ftco-nav').is(':visible') ) {
-				$(this).removeClass('active');
-			} else {
-				$(this).addClass('active');	
-			}
-
-			
-			
+		$nav.on('show.bs.collapse', function() {
+			$('body').addClass('menu-show');
+			$toggle.addClass('active');
 		});
 
+		$nav.on('hide.bs.collapse', function() {
+			$('body').removeClass('menu-show');
+			$toggle.removeClass('active');
+		});
+
+		$('body').on('click', '.js-fh5co-nav-toggle', function(event) {
+			event.preventDefault();
+		});
 	};
 	burgerMenu();
 
 
 	var onePageClick = function() {
-
-
 		$(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
 	    event.preventDefault();
 
 	    var href = $.attr(this, 'href');
+	    var $target = $(href);
+
+	    if (!$target.length) return;
 
 	    $('html, body').animate({
-	        scrollTop: $($.attr(this, 'href')).offset().top - 70
-	    }, 500, function() {
-	    	// window.location.hash = href;
-	    });
-		});
+	        scrollTop: $target.offset().top - SCROLL_OFFSET
+	    }, 500);
 
+	    if ($('#ftco-nav').hasClass('show')) {
+	    	$('#ftco-nav').collapse('hide');
+	    }
+		});
 	};
 
 	onePageClick();
@@ -105,6 +110,80 @@
 	        items:1
 	      }
 	    }
+		});
+
+		$('.pillars-carousel').each(function() {
+			var $carousel = $(this);
+			var $shell = $carousel.closest('.pillars-carousel-shell');
+			var $dots = $shell.find('.pillars-carousel-dots');
+
+			function getSlideCount(carousel) {
+				var itemCount = carousel.items().length;
+				var visibleItems = carousel.settings.items;
+				return Math.max(1, itemCount - visibleItems + 1);
+			}
+
+			function renderDots(carousel) {
+				var slideCount = getSlideCount(carousel);
+				var activeSlide = carousel.current();
+
+				$dots.off('click', '.pillars-carousel-dot');
+				$dots.empty();
+
+				for (var i = 0; i < slideCount; i += 1) {
+					$dots.append(
+						'<button type="button" class="pillars-carousel-dot" data-index="' + i + '" aria-label="Ir para página ' + (i + 1) + '"></button>'
+					);
+				}
+
+				$dots.on('click', '.pillars-carousel-dot', function() {
+					$carousel.trigger('to.owl.carousel', [$(this).data('index'), 350]);
+				});
+
+				$dots.find('.pillars-carousel-dot')
+					.removeClass('is-active')
+					.attr('aria-selected', 'false')
+					.eq(activeSlide)
+					.addClass('is-active')
+					.attr('aria-selected', 'true');
+			}
+
+			$carousel.on('initialized.owl.carousel changed.owl.carousel resized.owl.carousel', function(event) {
+				renderDots(event.relatedTarget);
+			});
+
+			$carousel.owlCarousel({
+				loop: false,
+				rewind: true,
+				margin: 12,
+				stagePadding: 40,
+				nav: false,
+				dots: false,
+				autoplay: false,
+				smartSpeed: 350,
+				touchDrag: true,
+				mouseDrag: true,
+				pullDrag: true,
+				freeDrag: false,
+				items: 2,
+				responsive: {
+					0: {
+						items: 2,
+						margin: 12,
+						stagePadding: 40
+					},
+					768: {
+						items: 2,
+						margin: 16,
+						stagePadding: 56
+					},
+					1200: {
+						items: 2,
+						margin: 16,
+						stagePadding: 64
+					}
+				}
+			});
 		});
 	};
 	carousel();
