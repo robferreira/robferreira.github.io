@@ -80,6 +80,13 @@ var I18n = (function() {
         }
     }
 
+    function closeMobileNav() {
+        var nav = document.getElementById('ftco-nav');
+        if (nav && nav.classList.contains('show') && typeof $ !== 'undefined') {
+            $('#ftco-nav').collapse('hide');
+        }
+    }
+
     function setLanguage(lang) {
         if (!translations[lang]) {
             return;
@@ -89,6 +96,7 @@ var I18n = (function() {
         applyStaticTranslations();
         updateLangSwitcher();
         renderDynamicContent();
+        closeMobileNav();
     }
 
     function getLanguage() {

@@ -51,40 +51,41 @@
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav nav ml-auto d-flex no-gutters align-items-center justify-content-center" id="menu">
                 </ul>
-                <div id="lang-switcher" class="lang-switcher d-flex align-items-center">
-                    <button type="button" data-lang="pt" aria-label="Português">PT</button>
-                    <span class="lang-divider">|</span>
-                    <button type="button" data-lang="en" aria-label="English">EN</button>
-                </div>
                 <div class="d-flex no-gutters align-items-center justify-content-center" id="socialMedia">
+                </div>
+                <div id="lang-switcher" class="lang-switcher d-flex flex-column align-items-center">
+                    <button type="button" data-lang="pt" aria-label="Português">PT</button>
+                    <button type="button" data-lang="en" aria-label="English">EN</button>
                 </div>
             </div>
         </div>
     </nav>
 
     <section id="home-section" class="hero hero-modern">
-        <div class="hero-bg-glow"></div>
+        <div class="hero-bg-photo" aria-hidden="true">
+            <img src="images/hero-profile.png" alt="" width="1024" height="576" decoding="async" fetchpriority="high">
+        </div>
+        <div class="hero-bg-overlay" aria-hidden="true"></div>
         <div class="container hero-content">
-            <div class="hero-avatar ftco-animate">
-                <img src="images/robinson_ferreira.jpg" alt="Robinson Ferreira">
+            <div class="hero-copy">
+                <h1 class="ftco-animate">Robinson Ferreira</h1>
+                <p class="hero-role ftco-animate">
+                    <span data-i18n="hero.role">Advanced Analytics e IA</span>
+                    <span class="hero-typewriter-sep">·</span>
+                    <span id="log" class="hero-typewriter"></span>
+                </p>
+                <p class="ftco-animate" id="desc-home" data-i18n="hero.bio" data-i18n-html="true">Hello, I'm <span id="my-age"></span> years old and have worked in IT since 2012. Today I lead Advanced Analytics and AI at Cielo, focusing on generative AI experimentation, reusable components and archetypes, reference architectures, security and performance. My data and Big Data journey since 2016 supports this work across large financial institutions.</p>
             </div>
-            <h1 class="ftco-animate">Robinson Ferreira</h1>
-            <p class="hero-role ftco-animate">
-                <span data-i18n="hero.role">Advanced Analytics & AI Manager</span>
-                <span class="hero-typewriter-sep">·</span>
-                <span id="log" class="hero-typewriter"></span>
-            </p>
-            <p class="ftco-animate" id="desc-home" data-i18n="hero.bio" data-i18n-html="true">Hello, I'm <span id="my-age"></span> years old and have worked in IT since 2012. Today I lead Advanced Analytics and AI at Cielo, focusing on generative AI experimentation, reusable components and archetypes, reference architectures, security and performance. My data and Big Data journey since 2016 supports this work across large financial institutions.</p>
         </div>
     </section>
 
     <section class="ftco-about ftco-section section-dark" id="about-section">
         <div class="container">
-            <div class="row d-flex align-items-start">
+            <div class="row d-flex align-items-center">
                 <div class="col-md-6 col-lg-5 d-flex mb-4 mb-md-0">
                     <div class="img-about img d-flex align-items-stretch w-100">
                         <div class="overlay"></div>
-                        <div class="img d-flex align-self-stretch align-items-center w-100" style="background-image:url(images/about-robinson_ferreira.jpg);">
+                        <div class="img d-flex align-self-stretch align-items-center w-100" style="background-image:url(images/about-profile.png);">
                         </div>
                     </div>
                 </div>
@@ -190,7 +191,7 @@
                     <form id="contact-form" class="contact-form w-100" novalidate>
                         <div class="contact-field">
                             <label class="contact-label" for="contact-name" data-i18n="contact.form.nameLabel">Nome</label>
-                            <input type="text" id="contact-name" name="name" class="contact-input" autocomplete="name" data-i18n-placeholder="contact.form.namePlaceholder" placeholder="Como podemos chamar você?">
+                            <input type="text" id="contact-name" name="name" class="contact-input" autocomplete="name" data-i18n-placeholder="contact.form.namePlaceholder" placeholder="Como posso chamar você?">
                         </div>
 
                         <div class="contact-field">
@@ -222,7 +223,7 @@
                     </form>
                 </div>
                 <div class="col-md-6 d-flex">
-                    <div class="img contact-image w-100" style="background-image: url(images/about.jpg);">
+                    <div class="img contact-image w-100" style="background-image: url(images/contact-profile.png);">
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ var translations = {
             contact: 'Contato'
         },
         hero: {
-            role: 'Gerente de Advanced Analytics e IA',
+            role: 'Advanced Analytics e IA',
             bio: 'Olá, tenho <span id="my-age"></span> anos e atuo na área de TI desde 2012. Hoje lidero Advanced Analytics e IA na Cielo, com foco em experimentação com IA generativa, desenvolvimento de componentes e arquetipos reutilizáveis, arquiteturas de referência, segurança e performance. Minha trajetória em dados e Big Data, desde 2016, sustenta essa atuação em grandes empresas do setor financeiro.'
         },
         typewriter: ['IA Generativa', 'Advanced Analytics'],
@@ -59,7 +59,7 @@ var translations = {
             subtitle: 'Além das redes sociais, você pode entrar em contato por este formulário.',
             form: {
                 nameLabel: 'Nome',
-                namePlaceholder: 'Como podemos chamar você?',
+                namePlaceholder: 'Como posso chamar você?',
                 emailLabel: 'E-mail',
                 emailPlaceholder: 'seuemail@exemplo.com',
                 messageLabel: 'Mensagem',
@@ -125,7 +125,7 @@ var translations = {
             contact: 'Contact'
         },
         hero: {
-            role: 'Advanced Analytics & AI Manager',
+            role: 'Advanced Analytics and AI',
             bio: 'Hello, I\'m <span id="my-age"></span> years old and have worked in IT since 2012. Today I lead Advanced Analytics and AI at Cielo, focusing on generative AI experimentation, reusable components and archetypes, reference architectures, security and performance. My data and Big Data journey since 2016 supports this work across large financial institutions.'
         },
         typewriter: ['Generative AI', 'Advanced Analytics'],
