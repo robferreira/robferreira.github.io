@@ -12,7 +12,7 @@ var translations = {
         },
         hero: {
             role: 'Advanced Analytics e IA',
-            bio: 'Olá, tenho <span id="my-age"></span> anos e atuo na área de TI desde 2012. Hoje lidero Advanced Analytics e IA na Cielo, com foco em experimentação com IA generativa, desenvolvimento de componentes e arquetipos reutilizáveis, arquiteturas de referência, segurança e performance. Minha trajetória em dados e Big Data, desde 2016, sustenta essa atuação em grandes empresas do setor financeiro.'
+            bio: 'Hoje lidero Advanced Analytics e IA na Cielo, atuando com IA generativa, componentes reutilizáveis, arquiteturas de referência, segurança e performance. Minha experiência em dados e Big Data, desde 2016, sustenta essa atuação no setor financeiro.'
         },
         typewriter: ['IA Generativa', 'Advanced Analytics'],
         about: {
@@ -126,7 +126,7 @@ var translations = {
         },
         hero: {
             role: 'Advanced Analytics and AI',
-            bio: 'Hello, I\'m <span id="my-age"></span> years old and have worked in IT since 2012. Today I lead Advanced Analytics and AI at Cielo, focusing on generative AI experimentation, reusable components and archetypes, reference architectures, security and performance. My data and Big Data journey since 2016 supports this work across large financial institutions.'
+            bio: 'Today I lead Advanced Analytics and AI at Cielo, working with generative AI, reusable components, reference architectures, security and performance. My experience in data and Big Data since 2016 supports this work in the financial sector.'
         },
         typewriter: ['Generative AI', 'Advanced Analytics'],
         about: {
