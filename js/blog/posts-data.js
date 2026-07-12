@@ -1,0 +1,22 @@
+window.BLOG_POSTS_DATA = {
+  "generatedAt": "2026-07-12T16:15:57.122Z",
+  "source": "https://medium.com/feed/@robinson_ferreira",
+  "posts": [
+    {
+      "id": "https://medium.com/p/25ed21d940ca",
+      "title": "Introdução ao apache nifi montando fluxo fast data",
+      "link": "https://medium.com/introdu%C3%A7%C3%A3o-ao-apache-nifi-montando-fluxo-fast-data/%C3%A9-dar-uma-introdu%C3%A7%C3%A3o-ao-nifi-e-mostrar-na-pratica-como-podemos-usa-lo-25ed21d940ca?source=rss-8b49f9f92571------2",
+      "publishedAt": "2020-06-02T16:03:22.000Z",
+      "excerpt": "Bom o objetivo deste texto, é dar uma introdução ao NiFi e mostrar na pratica como podemos usa-lo “substituindo” algumas ferramentas de stream utilizadas em…",
+      "image": "https://cdn-images-1.medium.com/max/1024/1*195Kbo_cpxTDS0F8cgNk7w.jpeg",
+      "categories": [
+        "data",
+        "fast-data",
+        "nifty-trading-tips",
+        "apache-nifi",
+        "big-data"
+      ],
+      "readingTime": 9
+    }
+  ]
+};

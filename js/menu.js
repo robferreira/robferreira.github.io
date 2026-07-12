@@ -1,30 +1,38 @@
-//Json Object
+var listMenuKeys = [
 
-var listMenu = [{
-    name: 'Home',
-    link: '#home-section',
-}, {
-    name: 'About',
-    link: '#about-section',
-}, {
-    name: 'Skills',
-    link: '#skills-section',
-}, {
-    name: 'Pro. Experience',
-    link: '#professional-experience',
-}, {
-    name: 'My Blog',
-    link: '#blog-section',
-}, {
-    name: 'Contact',
-    link: '#contact-section',
-}];
+    { key: 'nav.home', link: '#home-section' },
 
-var element = document.getElementById('menu');
+    { key: 'nav.about', link: '#about-section' },
 
-listMenu.forEach(function(menu) {
-    var name = menu.name;
-    var link = menu.link;
-    el = '<li class="nav-item" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><a href="' + link + '" class="nav-link"><span>' + name + '</span></a></li>'
-    element.innerHTML += el;
-});
+    { key: 'nav.experience', link: '#professional-experience' },
+
+    { key: 'nav.blog', link: '#blog-section' },
+
+    { key: 'nav.contact', link: '#contact-section' }
+
+];
+
+
+
+function renderMenu(lang) {
+
+    var element = document.getElementById('menu');
+
+    if (!element) return;
+
+    element.innerHTML = '';
+
+    listMenuKeys.forEach(function(menu) {
+
+        var name = I18n.t(menu.key);
+
+        var link = menu.link;
+
+        var el = '<li class="nav-item" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><a href="' + link + '" class="nav-link"><span>' + name + '</span></a></li>';
+
+        element.innerHTML += el;
+
+    });
+
+}
+

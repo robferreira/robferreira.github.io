@@ -9538,7 +9538,7 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
-body { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 14px; line-height: 1em; color: #333; background-color: #EFEFEF; margin: 0; }
+body { font-family: "Inter", "Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 14px; line-height: 1em; color: #94a3b8; background-color: transparent; margin: 0; }
 h2,
 h3,
 h4,
@@ -9546,32 +9546,75 @@ h5 { margin-top: 5px; margin-bottom: 5px; line-height: 1; }
 
 ul#timeline-menu { height: 50px; text-align: center; }
     ul#timeline-menu li { position: relative; float: left; list-style: none; margin: 0px; padding: 0px; }
-        ul#timeline-menu li a { display: block; text-decoration: none; font-size: 16px; padding: 10px; padding-top: 20px; color: black; font-weight: bold; border-bottom: 5px solid transparent; }
-            ul#timeline-menu li a:hover { color: #0075f6; border-bottom: 5px solid #0075f6; font-weight: normal; }
+        ul#timeline-menu li a { display: block; text-decoration: none; font-size: 16px; padding: 10px; padding-top: 20px; color: #e2e8f0; font-weight: bold; border-bottom: 5px solid transparent; }
+            ul#timeline-menu li a:hover { color: #60a5fa; border-bottom: 5px solid #60a5fa; font-weight: normal; }
 
 section#timeline { width: 90%; margin: 20px auto; padding-bottom: 20px; position: relative; }
-    section#timeline:before { top: 0; bottom: 0; position: absolute; content: " "; width: 2px; background-color: #0075f6; left: 50%; height: 100%; margin-left: -1.5px; z-index: -1; }
+    section#timeline:before { top: 0; bottom: 0; position: absolute; content: " "; width: 2px; background-color: #60a5fa; left: 50%; height: 100%; margin-left: -1.5px; z-index: -1; }
     section#timeline article { width: 100%; margin-bottom: 20px; position: relative; }
         section#timeline article:after { content: ''; display: block; clear: both; }
 
-    section#timeline > article > div.panel { width: 45%; float: left; background: #FFF; border: none; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15); box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15); }
-        section#timeline > article > div.panel .panel-heading { padding: 5px 10px; margin: 0; font-size: 1.2em; background-color: #0075f6; overflow: hidden; text-align: center; -webkit-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; }
+    section#timeline > article > div.panel { width: 45%; float: left; background: #111b2e; border: 1px solid rgba(96, 165, 250, 0.2); -webkit-border-radius: 12px; -moz-border-radius: 12px; border-radius: 12px; -webkit-box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3); box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3); }
+        section#timeline > article > div.panel .panel-heading { padding: 5px 10px; margin: 0; font-size: 1.2em; background: linear-gradient(135deg, #3b82f6, #1e40af); overflow: hidden; text-align: center; -webkit-border-radius: 12px 12px 0 0; -moz-border-radius: 12px 12px 0 0; border-radius: 12px 12px 0 0; }
             section#timeline > article > div.panel .panel-heading .panel-title { color: #FFF; }
-        section#timeline > article > div.panel .panel-body { padding: 15px; position: relative; }
-    section#timeline article div.panel-body:after { content: ''; position: absolute; top: 20px; right: -5px; width: 10px; height: 10px; -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); transform: rotate(-45deg); background: #FFF; }
+        section#timeline > article > div.panel .panel-body { padding: 15px; position: relative; color: #94a3b8; }
+    section#timeline article div.panel-body:after { content: ''; position: absolute; top: 20px; right: -5px; width: 10px; height: 10px; -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); -webkit-transform: rotate(-45deg); transform: rotate(-45deg); background: #111b2e; }
     section#timeline > article > div.panel .panel-body img { float: left; margin: 0 15px 15px 0; }
-    section#timeline > article > div.panel .panel-footer { padding: 15px; background-color: #EEE; }
+    section#timeline > article > div.panel .panel-footer { padding: 15px; background-color: rgba(10, 15, 30, 0.5); }
 
     section#timeline > article.inverted > div.panel { float: right; }
         section#timeline > article.inverted > div.panel .panel-body:after { left: -5px; }
         section#timeline > article.inverted > div.panel .panel-body img { float: right; }
 
     section#timeline div[class*="group"],
-    section#timeline article div.panel div.badge { display: block; text-align: center; cursor: none; font-weight: bold; -moz-box-shadow: 0 0 0 2px #0075f6, inset 0 2px 0 rgba(0, 0, 0, 0.1), 0 3px 0 2px rgba(0, 0, 0, 0.15); -webkit-box-shadow: 0 0 0 2px #0075f6, inset 0 2px 0 rgba(0, 0, 0, 0.1), 0 3px 0 2px rgba(0, 0, 0, 0.15); box-shadow: 0 0 0 2px #0075f6, inset 0 2px 0 rgba(0, 0, 0, 0.1), 0 3px 0 2px rgba(0, 0, 0, 0.15); }
-    section#timeline div[class*="group"] { width: 65px; font-size: 1.3em; margin: 35px auto; padding: 5px; border-radius: 0px; background: #0075f6; color: #FFF; }
-    section#timeline article div.panel div.badge { padding-top:12px;position: absolute; top: 0; left: 50%; margin: 0 0 0 -15px; border-radius: 50%; font-size: 0.60em; width: 32px; height: 32px; background: #FFF; color: #0075f6; }
-        section#timeline article div.panel div.badge:last-child { background-color: #0075f6; width: 20px; height: 20px; margin: 0 0 0 -10px; }
+    section#timeline article div.panel div.badge { display: block; text-align: center; cursor: none; font-weight: bold; -moz-box-shadow: 0 0 0 2px #3b82f6, inset 0 2px 0 rgba(0, 0, 0, 0.1), 0 3px 0 2px rgba(0, 0, 0, 0.15); -webkit-box-shadow: 0 0 0 2px #3b82f6, inset 0 2px 0 rgba(0, 0, 0, 0.1), 0 3px 0 2px rgba(0, 0, 0, 0.15); box-shadow: 0 0 0 2px #3b82f6, inset 0 2px 0 rgba(0, 0, 0, 0.1), 0 3px 0 2px rgba(0, 0, 0, 0.15); }
+    section#timeline div[class*="group"] { width: 65px; font-size: 1.3em; margin: 35px auto; padding: 5px; border-radius: 8px; background: #3b82f6; color: #FFF; }
+    section#timeline article div.panel div.badge { padding-top:12px;position: absolute; top: 0; left: 50%; margin: 0 0 0 -15px; border-radius: 50%; font-size: 0.60em; width: 32px; height: 32px; background: #111b2e; color: #60a5fa; }
+        section#timeline article div.panel div.badge:last-child { background-color: #60a5fa; width: 20px; height: 20px; margin: 0 0 0 -10px; }
 
-	a.mylink { color: #0075f6; font-weight: bold; }
-  a.mylink:hover { color: #DA3203; }
+	a.mylink { color: #60a5fa; font-weight: bold; }
+  a.mylink:hover { color: #38bdf8; }
+
+.lang-switcher {
+  margin-left: 10px;
+  margin-right: 10px;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  line-height: 1;
+}
+.lang-switcher button {
+  background: transparent;
+  border: none;
+  color: #e2e8f0;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 2px 6px;
+  line-height: 1.2;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+.lang-switcher button:hover,
+.lang-switcher button.active {
+  opacity: 1;
+  color: #60a5fa;
+}
+.lang-switcher .lang-divider {
+  color: #94a3b8;
+  opacity: 0.4;
+  font-size: 12px;
+  user-select: none;
+}
+@media (max-width: 991.98px) {
+  .lang-switcher {
+    margin: 10px 0;
+  }
+  .lang-switcher button {
+    color: #e2e8f0;
+  }
+  .lang-switcher .lang-divider {
+    color: #94a3b8;
+  }
+}
   

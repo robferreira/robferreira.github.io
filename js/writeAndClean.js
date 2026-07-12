@@ -1,11 +1,13 @@
-var div = document.getElementById('log');
-var texts = ['Big Data', 'Fast Data'];
+var typewriterTimer = null;
+var typewriterCleanTimer = null;
 
 function write(str, done) {
+    var div = document.getElementById('log');
+    if (!div) return;
     var char = str.split('').reverse();
-    var typer = setInterval(function() {
+    typewriterTimer = setInterval(function() {
         if (!char.length) {
-            clearInterval(typer);
+            clearInterval(typewriterTimer);
             return setTimeout(done, 1000);
         }
         var next = char.pop();
@@ -14,28 +16,41 @@ function write(str, done) {
 }
 
 function clean(done) {
+    var div = document.getElementById('log');
+    if (!div) return;
     var char = div.innerHTML;
     var nr = char.length;
-    var typer = setInterval(function() {
-        if (nr-- == 0) {
-            clearInterval(typer);
+    typewriterCleanTimer = setInterval(function() {
+        if (nr-- === 0) {
+            clearInterval(typewriterCleanTimer);
             return done();
         }
         div.innerHTML = char.slice(0, nr);
     }, 100);
 }
 
-function footer(conteudos, el) {
+function stopTypewriter() {
+    if (typewriterTimer) clearInterval(typewriterTimer);
+    if (typewriterCleanTimer) clearInterval(typewriterCleanTimer);
+    var div = document.getElementById('log');
+    if (div) div.innerHTML = '';
+}
+
+function startTypewriter(texts) {
+    stopTypewriter();
     var atual = -1;
 
-    function next(cb) {
-        if (atual < conteudos.length - 1) atual++;
+    function next() {
+        if (atual < texts.length - 1) atual++;
         else atual = 0;
-        var str = conteudos[atual];
+        var str = texts[atual];
         write(str, function() {
             clean(next);
         });
     }
-    next(next);
+    next();
 }
-footer(texts);
+
+function restartTypewriter(texts) {
+    startTypewriter(texts);
+}
