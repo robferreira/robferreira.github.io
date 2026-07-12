@@ -111,6 +111,33 @@
 	      }
 	    }
 		});
+
+		$('.pillars-carousel').owlCarousel({
+			loop: true,
+			margin: 20,
+			nav: true,
+			dots: true,
+			autoplay: false,
+			smartSpeed: 450,
+			navText: [
+				"<span class='ion-ios-arrow-back' aria-hidden='true'></span>",
+				"<span class='ion-ios-arrow-forward' aria-hidden='true'></span>"
+			],
+			responsive: {
+				0: {
+					items: 1,
+					margin: 16
+				},
+				768: {
+					items: 2,
+					margin: 20
+				},
+				1200: {
+					items: 2,
+					margin: 24
+				}
+			}
+		});
 	};
 	carousel();
 

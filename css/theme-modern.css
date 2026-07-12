@@ -378,10 +378,73 @@ a:hover, a:focus {
   margin-bottom: 2rem;
 }
 
-#about-section .pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+#about-section .pillars-carousel {
+  margin-top: 0.5rem;
+}
+
+#about-section .pillars-carousel.owl-carousel .owl-item {
+  opacity: 1;
+}
+
+#about-section .pillars-carousel .pillar-card {
+  height: 100%;
+  margin: 0;
+}
+
+#about-section .pillars-carousel .owl-stage-outer {
+  padding: 0.25rem 0 0.5rem;
+}
+
+#about-section .pillars-carousel .owl-nav button.owl-prev,
+#about-section .pillars-carousel .owl-nav button.owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(17, 27, 46, 0.85) !important;
+  border: 1px solid var(--glass-border) !important;
+  color: var(--accent) !important;
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+#about-section .pillars-carousel .owl-nav button.owl-prev:hover,
+#about-section .pillars-carousel .owl-nav button.owl-next:hover {
+  background: rgba(59, 130, 246, 0.2) !important;
+  color: var(--text) !important;
+  border-color: var(--accent) !important;
+}
+
+#about-section .pillars-carousel .owl-nav button.owl-prev {
+  left: -12px;
+}
+
+#about-section .pillars-carousel .owl-nav button.owl-next {
+  right: -12px;
+}
+
+#about-section .pillars-carousel .owl-dots {
+  margin-top: 1rem;
+}
+
+#about-section .pillars-carousel .owl-dots .owl-dot span {
+  width: 8px;
+  height: 8px;
+  margin: 4px;
+  background: var(--text-muted);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#about-section .pillars-carousel .owl-dots .owl-dot.active span,
+#about-section .pillars-carousel .owl-dots .owl-dot:hover span {
+  background: var(--accent);
+  transform: scale(1.15);
 }
 
 #about-section .pillar-card .icon span {
@@ -1282,8 +1345,12 @@ a:hover, a:focus {
     padding-left: 15px !important;
   }
 
-  #about-section .pillars-grid {
-    grid-template-columns: 1fr;
+  #about-section .pillars-carousel .owl-nav button.owl-prev {
+    left: 0;
+  }
+
+  #about-section .pillars-carousel .owl-nav button.owl-next {
+    right: 0;
   }
 
   #about-section .img-about,
