@@ -73,7 +73,7 @@
                     <span class="hero-typewriter-sep">·</span>
                     <span id="log" class="hero-typewriter"></span>
                 </p>
-                <p class="ftco-animate" id="desc-home" data-i18n="hero.bio" data-i18n-html="true">Hoje lidero Advanced Analytics e IA na Cielo, atuando com IA generativa, componentes reutilizáveis, arquiteturas de referência, segurança e performance. Minha experiência em dados e Big Data, desde 2016, sustenta essa atuação no setor financeiro.</p>
+                <p class="ftco-animate" id="desc-home" data-i18n="hero.bio" data-i18n-html="true">Olá! Tenho <span id="my-age"></span> anos e atuo na área de tecnologia desde os 17. Atualmente, lidero iniciativas de Advanced Analytics e Inteligência Artificial na Cielo, com foco em IA generativa, desenvolvimento de componentes reutilizáveis, arquiteturas de referência, segurança e performance. Minha experiência com dados e Big Data, construída desde 2016, sustenta minha atuação em grandes projetos no setor financeiro.</p>
             </div>
         </div>
     </section>
@@ -191,41 +191,56 @@
                     <p data-i18n="testimonials.subtitle">Se você trabalha ou já trabalhou comigo, ficarei muito feliz em receber seu depoimento ou feedback. Vou ler cada mensagem com muito carinho, e sua opinião certamente contribuirá para o meu crescimento profissional. Obrigado pelo apoio!</p>
                 </div>
                 <div class="col-md-6">
-                    <form id="testimonial-form" class="testimonial-form" novalidate>
-                        <div class="testimonial-form-field">
-                            <label class="testimonial-form-label" for="testimonial-name" data-i18n="testimonials.form.nameLabel">Nome</label>
-                            <input type="text" id="testimonial-name" name="name" class="testimonial-form-input" autocomplete="name" required aria-describedby="testimonial-name-error" data-i18n-placeholder="testimonials.form.namePlaceholder" placeholder="Seu nome">
-                            <span id="testimonial-name-error" class="testimonial-form-error" role="alert" hidden></span>
-                        </div>
-
-                        <div class="testimonial-form-field">
-                            <label class="testimonial-form-label" for="testimonial-quote" data-i18n="testimonials.form.quoteLabel">Depoimento</label>
-                            <textarea id="testimonial-quote" name="quote" class="testimonial-form-textarea" rows="5" autocomplete="off" required maxlength="240" aria-describedby="testimonial-quote-error testimonial-quote-count" data-i18n-placeholder="testimonials.form.quotePlaceholder" placeholder="Escreva seu depoimento (até 240 caracteres)"></textarea>
-                            <span id="testimonial-quote-count" class="testimonial-form-char-count" hidden></span>
-                            <span id="testimonial-quote-error" class="testimonial-form-error" role="alert" hidden></span>
-                        </div>
-
-                        <div class="testimonial-form-field">
-                            <label class="testimonial-form-label" for="testimonial-linkedin-slug" data-i18n="testimonials.form.linkedinLabel">LinkedIn (opcional)</label>
-                            <div class="testimonial-linkedin-field">
-                                <span class="testimonial-linkedin-prefix" aria-hidden="true">https://www.linkedin.com/in/</span>
-                                <input type="text" id="testimonial-linkedin-slug" name="linkedin_slug" class="testimonial-form-input testimonial-linkedin-slug" autocomplete="username" spellcheck="false" data-i18n-placeholder="testimonials.form.linkedinPlaceholder" placeholder="seu-usuario">
-                            </div>
-                            <p class="testimonial-form-hint" data-i18n="testimonials.form.linkedinHint">Informe apenas o usuário do perfil. O restante do link já está preenchido.</p>
-                        </div>
-
-                        <div class="testimonial-form-honeypot" aria-hidden="true">
-                            <label for="testimonial-website">Website</label>
-                            <input type="text" id="testimonial-website" name="website" tabindex="-1" autocomplete="off">
-                        </div>
-
-                        <div id="testimonial-form-status" class="testimonial-form-status" role="status" aria-live="off" tabindex="-1" hidden></div>
-
-                        <button type="submit" id="testimonial-submit" class="testimonial-form-submit" aria-busy="false">
-                            <span class="testimonial-form-submit-spinner" aria-hidden="true"></span>
-                            <span class="testimonial-form-submit-label" data-i18n="testimonials.form.submit">Enviar depoimento</span>
+                    <div class="testimonial-form-panel">
+                        <button
+                            type="button"
+                            id="testimonial-form-toggle"
+                            class="testimonial-form-toggle"
+                            aria-expanded="false"
+                            aria-controls="testimonial-form-collapse"
+                        >
+                            <span data-i18n="testimonials.form.openCta">Deixar meu depoimento</span>
+                            <span class="testimonial-form-toggle-icon" aria-hidden="true"></span>
                         </button>
-                    </form>
+
+                        <div id="testimonial-form-collapse" class="testimonial-form-collapse" hidden>
+                            <form id="testimonial-form" class="testimonial-form" novalidate>
+                                <div class="testimonial-form-field">
+                                    <label class="testimonial-form-label" for="testimonial-name" data-i18n="testimonials.form.nameLabel">Nome</label>
+                                    <input type="text" id="testimonial-name" name="name" class="testimonial-form-input" autocomplete="name" required aria-describedby="testimonial-name-error" data-i18n-placeholder="testimonials.form.namePlaceholder" placeholder="Seu nome">
+                                    <span id="testimonial-name-error" class="testimonial-form-error" role="alert" hidden></span>
+                                </div>
+
+                                <div class="testimonial-form-field">
+                                    <label class="testimonial-form-label" for="testimonial-quote" data-i18n="testimonials.form.quoteLabel">Depoimento</label>
+                                    <textarea id="testimonial-quote" name="quote" class="testimonial-form-textarea" rows="5" autocomplete="off" required maxlength="240" aria-describedby="testimonial-quote-error testimonial-quote-count" data-i18n-placeholder="testimonials.form.quotePlaceholder" placeholder="Escreva seu depoimento (até 240 caracteres)"></textarea>
+                                    <span id="testimonial-quote-count" class="testimonial-form-char-count" hidden></span>
+                                    <span id="testimonial-quote-error" class="testimonial-form-error" role="alert" hidden></span>
+                                </div>
+
+                                <div class="testimonial-form-field">
+                                    <label class="testimonial-form-label" for="testimonial-linkedin-slug" data-i18n="testimonials.form.linkedinLabel">LinkedIn (opcional)</label>
+                                    <div class="testimonial-linkedin-field">
+                                        <span class="testimonial-linkedin-prefix" aria-hidden="true">https://www.linkedin.com/in/</span>
+                                        <input type="text" id="testimonial-linkedin-slug" name="linkedin_slug" class="testimonial-form-input testimonial-linkedin-slug" autocomplete="username" spellcheck="false" data-i18n-placeholder="testimonials.form.linkedinPlaceholder" placeholder="seu-usuario">
+                                    </div>
+                                    <p class="testimonial-form-hint" data-i18n="testimonials.form.linkedinHint">Informe apenas o usuário do perfil. O restante do link já está preenchido.</p>
+                                </div>
+
+                                <div class="testimonial-form-honeypot" aria-hidden="true">
+                                    <label for="testimonial-website">Website</label>
+                                    <input type="text" id="testimonial-website" name="website" tabindex="-1" autocomplete="off">
+                                </div>
+
+                                <div id="testimonial-form-status" class="testimonial-form-status" role="status" aria-live="off" tabindex="-1" hidden></div>
+
+                                <button type="submit" id="testimonial-submit" class="testimonial-form-submit" aria-busy="false">
+                                    <span class="testimonial-form-submit-spinner" aria-hidden="true"></span>
+                                    <span class="testimonial-form-submit-label" data-i18n="testimonials.form.submit">Enviar depoimento</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
