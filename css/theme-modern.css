@@ -994,6 +994,84 @@ a:hover, a:focus {
   margin-bottom: 0;
 }
 
+#testimonials-section .testimonial-form-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  width: 100%;
+}
+
+#testimonials-section .testimonial-form-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: 52px;
+  padding: 0.85rem 1.15rem;
+  border-radius: 14px;
+  border: 1px solid var(--glass-border);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.22), rgba(17, 27, 46, 0.75));
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#testimonials-section .testimonial-form-toggle:hover {
+  border-color: var(--border-glow);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.32), rgba(17, 27, 46, 0.85));
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+}
+
+#testimonials-section .testimonial-form-toggle:focus-visible {
+  outline: 2px solid var(--accent-cyan);
+  outline-offset: 2px;
+}
+
+#testimonials-section .testimonial-form-toggle-icon {
+  flex: 0 0 auto;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.25s ease;
+}
+
+#testimonials-section .testimonial-form-toggle.is-open,
+#testimonials-section .testimonial-form-toggle[aria-expanded="true"] {
+  border-color: var(--border-glow);
+}
+
+#testimonials-section .testimonial-form-toggle.is-open .testimonial-form-toggle-icon,
+#testimonials-section .testimonial-form-toggle[aria-expanded="true"] .testimonial-form-toggle-icon {
+  transform: rotate(225deg) translate(-1px, -1px);
+}
+
+#testimonials-section .testimonial-form-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.28s ease, opacity 0.22s ease;
+}
+
+#testimonials-section .testimonial-form-collapse.is-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+#testimonials-section .testimonial-form-collapse > .testimonial-form {
+  overflow: hidden;
+  min-height: 0;
+}
+
+#testimonials-section .testimonial-form-collapse[hidden] {
+  display: none;
+}
+
 #testimonials-section .testimonial-form {
   position: relative;
   display: flex;
