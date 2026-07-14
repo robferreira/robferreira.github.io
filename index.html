@@ -69,7 +69,7 @@
             <div class="hero-copy">
                 <h1 class="ftco-animate">Robinson Ferreira</h1>
                 <p class="hero-role ftco-animate">
-                    <span data-i18n="hero.role">Advanced Analytics e IA</span>
+                    <span data-i18n="hero.role">Dados & IA</span>
                     <span class="hero-typewriter-sep">·</span>
                     <span id="log" class="hero-typewriter"></span>
                 </p>
@@ -182,7 +182,57 @@
         </div>
     </section>
 
-    <section class="ftco-section contact-section ftco-no-pb section-alt" id="contact-section">
+    <section class="ftco-section section-alt" id="testimonials-section">
+        <div class="container">
+            <div class="row align-items-center testimonials-intro-grid mb-5">
+                <div class="col-md-6 heading-section testimonials-intro-copy ftco-animate mb-4 mb-md-0">
+                    <span class="subheading" data-i18n="testimonials.subheading">Depoimentos</span>
+                    <h2 class="mb-4" data-i18n="testimonials.title">O que dizem sobre o meu trabalho</h2>
+                    <p data-i18n="testimonials.subtitle">Se você trabalha ou já trabalhou comigo, ficarei muito feliz em receber seu depoimento ou feedback. Vou ler cada mensagem com muito carinho, e sua opinião certamente contribuirá para o meu crescimento profissional. Obrigado pelo apoio!</p>
+                </div>
+                <div class="col-md-6">
+                    <form id="testimonial-form" class="testimonial-form" novalidate>
+                        <div class="testimonial-form-field">
+                            <label class="testimonial-form-label" for="testimonial-name" data-i18n="testimonials.form.nameLabel">Nome</label>
+                            <input type="text" id="testimonial-name" name="name" class="testimonial-form-input" autocomplete="name" required aria-describedby="testimonial-name-error" data-i18n-placeholder="testimonials.form.namePlaceholder" placeholder="Seu nome">
+                            <span id="testimonial-name-error" class="testimonial-form-error" role="alert" hidden></span>
+                        </div>
+
+                        <div class="testimonial-form-field">
+                            <label class="testimonial-form-label" for="testimonial-quote" data-i18n="testimonials.form.quoteLabel">Depoimento</label>
+                            <textarea id="testimonial-quote" name="quote" class="testimonial-form-textarea" rows="5" autocomplete="off" required maxlength="240" aria-describedby="testimonial-quote-error testimonial-quote-count" data-i18n-placeholder="testimonials.form.quotePlaceholder" placeholder="Escreva seu depoimento (até 240 caracteres)"></textarea>
+                            <span id="testimonial-quote-count" class="testimonial-form-char-count" hidden></span>
+                            <span id="testimonial-quote-error" class="testimonial-form-error" role="alert" hidden></span>
+                        </div>
+
+                        <div class="testimonial-form-field">
+                            <label class="testimonial-form-label" for="testimonial-linkedin-slug" data-i18n="testimonials.form.linkedinLabel">LinkedIn (opcional)</label>
+                            <div class="testimonial-linkedin-field">
+                                <span class="testimonial-linkedin-prefix" aria-hidden="true">https://www.linkedin.com/in/</span>
+                                <input type="text" id="testimonial-linkedin-slug" name="linkedin_slug" class="testimonial-form-input testimonial-linkedin-slug" autocomplete="username" spellcheck="false" data-i18n-placeholder="testimonials.form.linkedinPlaceholder" placeholder="seu-usuario">
+                            </div>
+                            <p class="testimonial-form-hint" data-i18n="testimonials.form.linkedinHint">Informe apenas o usuário do perfil. O restante do link já está preenchido.</p>
+                        </div>
+
+                        <div class="testimonial-form-honeypot" aria-hidden="true">
+                            <label for="testimonial-website">Website</label>
+                            <input type="text" id="testimonial-website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <div id="testimonial-form-status" class="testimonial-form-status" role="status" aria-live="off" tabindex="-1" hidden></div>
+
+                        <button type="submit" id="testimonial-submit" class="testimonial-form-submit" aria-busy="false">
+                            <span class="testimonial-form-submit-spinner" aria-hidden="true"></span>
+                            <span class="testimonial-form-submit-label" data-i18n="testimonials.form.submit">Enviar depoimento</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="testimonials-marquee" id="testimonialsMarquee" aria-label="Depoimentos"></div>
+    </section>
+
+    <section class="ftco-section contact-section ftco-no-pb section-dark" id="contact-section">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section text-center ftco-animate">
@@ -281,6 +331,10 @@
     <script src="js/blog/posts-data.js"></script>
     <script src="js/blog/blog-card.js"></script>
     <script src="js/blog/blog-preview.js"></script>
+    <script src="js/testimonials/testimonials-data.js"></script>
+    <script src="js/testimonials/testimonials.js"></script>
+    <script src="js/config/testimonials.config.js"></script>
+    <script src="js/testimonials/testimonials-form.js"></script>
     <script src="js/config/contact.config.js"></script>
     <script src="js/contact-form.js"></script>
     <!-- myCustom -->
