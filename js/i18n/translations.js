@@ -8,13 +8,14 @@ var translations = {
             about: 'Sobre',
             experience: 'Experiência',
             blog: 'Blog',
+            testimonials: 'Depoimentos',
             contact: 'Contato'
         },
         hero: {
-            role: 'Advanced Analytics e IA',
+            role: 'Dados & IA',
             bio: 'Hoje lidero Advanced Analytics e IA na Cielo, atuando com IA generativa, componentes reutilizáveis, arquiteturas de referência, segurança e performance. Minha experiência em dados e Big Data, desde 2016, sustenta essa atuação no setor financeiro.'
         },
-        typewriter: ['IA Generativa', 'Advanced Analytics'],
+        typewriter: ['Advanced Analytics', 'IA Generativa', 'Big Data', 'Fast Data'],
         about: {
             subheading: 'Bem-vindo',
             title: 'Sobre mim',
@@ -51,6 +52,35 @@ var translations = {
                 emptyText: 'Os artigos podem ser acessados diretamente no Medium.',
                 emptyCta: 'Ver artigos no Medium',
                 minRead: '{min} min de leitura'
+            }
+        },
+        testimonials: {
+            subheading: 'Depoimentos',
+            title: 'O que dizem sobre o meu trabalho',
+            subtitle: 'Se você trabalha ou já trabalhou comigo, ficarei muito feliz em receber seu depoimento ou feedback. Vou ler cada mensagem com muito carinho, e sua opinião certamente contribuirá para o meu crescimento profissional. Obrigado pelo apoio!',
+            ariaLabel: 'Depoimentos',
+            linkedin: 'LinkedIn',
+            linkedinAria: 'Ver perfil de {name} no LinkedIn',
+            form: {
+                nameLabel: 'Nome',
+                namePlaceholder: 'Seu nome',
+                quoteLabel: 'Depoimento',
+                quotePlaceholder: 'Escreva seu depoimento (até 240 caracteres)',
+                linkedinLabel: 'LinkedIn (opcional)',
+                linkedinPlaceholder: 'seu-usuario',
+                linkedinHint: 'Informe apenas o usuário do perfil. O restante do link já está preenchido.',
+                submit: 'Enviar depoimento',
+                sending: 'Enviando…',
+                success: 'Depoimento enviado com sucesso! Obrigado pelo carinho.',
+                error: 'Não foi possível enviar seu depoimento. Tente novamente em instantes.',
+                errorConfig: 'O formulário ainda não está configurado. Configure o endpoint em js/config/testimonials.config.js.',
+                charCount: '{current}/{max} caracteres (mín. {min})',
+                errors: {
+                    nameRequired: 'Informe seu nome.',
+                    quoteRequired: 'Escreva seu depoimento.',
+                    quoteTooShort: 'O depoimento deve ter pelo menos {min} caracteres.',
+                    quoteTooLong: 'O depoimento deve ter no máximo {max} caracteres.'
+                }
             }
         },
         contact: {
@@ -122,13 +152,14 @@ var translations = {
             about: 'About',
             experience: 'Experience',
             blog: 'Blog',
+            testimonials: 'Testimonials',
             contact: 'Contact'
         },
         hero: {
-            role: 'Advanced Analytics and AI',
+            role: 'Data & AI',
             bio: 'Today I lead Advanced Analytics and AI at Cielo, working with generative AI, reusable components, reference architectures, security and performance. My experience in data and Big Data since 2016 supports this work in the financial sector.'
         },
-        typewriter: ['Generative AI', 'Advanced Analytics'],
+        typewriter: ['Advanced Analytics', 'Generative AI', 'Big Data', 'Fast Data'],
         about: {
             subheading: 'Welcome',
             title: 'About Me',
@@ -165,6 +196,35 @@ var translations = {
                 emptyText: 'Articles can be accessed directly on Medium.',
                 emptyCta: 'View articles on Medium',
                 minRead: '{min} min read'
+            }
+        },
+        testimonials: {
+            subheading: 'Testimonials',
+            title: 'What people say about my work',
+            subtitle: 'If you work or have worked with me, I would be very happy to receive your testimonial or feedback. I will read every message carefully, and your opinion will certainly contribute to my professional growth. Thank you for your support!',
+            ariaLabel: 'Testimonials',
+            linkedin: 'LinkedIn',
+            linkedinAria: 'View {name}\'s LinkedIn profile',
+            form: {
+                nameLabel: 'Name',
+                namePlaceholder: 'Your name',
+                quoteLabel: 'Testimonial',
+                quotePlaceholder: 'Write your testimonial (up to 240 characters)',
+                linkedinLabel: 'LinkedIn (optional)',
+                linkedinPlaceholder: 'your-username',
+                linkedinHint: 'Enter only your profile username. The rest of the link is already filled in.',
+                submit: 'Send testimonial',
+                sending: 'Sending…',
+                success: 'Testimonial sent successfully! Thank you for your support.',
+                error: 'Could not send your testimonial. Please try again shortly.',
+                errorConfig: 'The form is not configured yet. Set the endpoint in js/config/testimonials.config.js.',
+                charCount: '{current}/{max} characters (min. {min})',
+                errors: {
+                    nameRequired: 'Please enter your name.',
+                    quoteRequired: 'Please write your testimonial.',
+                    quoteTooShort: 'The testimonial must be at least {min} characters.',
+                    quoteTooLong: 'The testimonial must be at most {max} characters.'
+                }
             }
         },
         contact: {

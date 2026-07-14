@@ -78,6 +78,12 @@ var I18n = (function() {
         if (typeof BlogPreview !== 'undefined' && typeof BlogPreview.refresh === 'function') {
             BlogPreview.refresh();
         }
+        if (typeof Testimonials !== 'undefined' && typeof Testimonials.refresh === 'function') {
+            Testimonials.refresh();
+        }
+        if (typeof TestimonialsForm !== 'undefined' && typeof TestimonialsForm.refreshLabels === 'function') {
+            TestimonialsForm.refreshLabels();
+        }
     }
 
     function closeMobileNav() {

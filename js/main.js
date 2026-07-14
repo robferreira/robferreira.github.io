@@ -66,22 +66,39 @@
 	burgerMenu();
 
 
+	var scrollToSection = function(href) {
+		var $target = $(href);
+
+		if (!$target.length) {
+			return;
+		}
+
+		$('html, body').stop(true).animate({
+			scrollTop: $target.offset().top - SCROLL_OFFSET
+		}, 500);
+
+		if (window.history && window.history.replaceState) {
+			window.history.replaceState(null, '', href);
+		} else {
+			window.location.hash = href;
+		}
+
+		if ($('#ftco-nav').hasClass('show')) {
+			$('#ftco-nav').collapse('hide');
+		}
+	};
+
 	var onePageClick = function() {
-		$(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
-	    event.preventDefault();
+		$(document).on('click', '#ftco-nav a[href^="#"], .navbar-brand[href^="#"]', function (event) {
+			event.preventDefault();
+			event.stopPropagation();
 
-	    var href = $.attr(this, 'href');
-	    var $target = $(href);
+			var href = $.attr(this, 'href');
+			if (!href || href.charAt(0) !== '#') {
+				return;
+			}
 
-	    if (!$target.length) return;
-
-	    $('html, body').animate({
-	        scrollTop: $target.offset().top - SCROLL_OFFSET
-	    }, 500);
-
-	    if ($('#ftco-nav').hasClass('show')) {
-	    	$('#ftco-nav').collapse('hide');
-	    }
+			scrollToSection(href);
 		});
 	};
 
