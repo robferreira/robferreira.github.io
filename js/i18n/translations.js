@@ -12,10 +12,10 @@ var translations = {
             contact: 'Contato'
         },
         hero: {
-            role: 'Advanced Analytics e IA',
+            role: 'Dados & IA',
             bio: 'Hoje lidero Advanced Analytics e IA na Cielo, atuando com IA generativa, componentes reutilizáveis, arquiteturas de referência, segurança e performance. Minha experiência em dados e Big Data, desde 2016, sustenta essa atuação no setor financeiro.'
         },
-        typewriter: ['IA Generativa', 'Advanced Analytics'],
+        typewriter: ['Advanced Analytics', 'IA Generativa', 'Big Data', 'Fast Data'],
         about: {
             subheading: 'Bem-vindo',
             title: 'Sobre mim',
@@ -156,10 +156,10 @@ var translations = {
             contact: 'Contact'
         },
         hero: {
-            role: 'Advanced Analytics and AI',
+            role: 'Data & AI',
             bio: 'Today I lead Advanced Analytics and AI at Cielo, working with generative AI, reusable components, reference architectures, security and performance. My experience in data and Big Data since 2016 supports this work in the financial sector.'
         },
-        typewriter: ['Generative AI', 'Advanced Analytics'],
+        typewriter: ['Advanced Analytics', 'Generative AI', 'Big Data', 'Fast Data'],
         about: {
             subheading: 'Welcome',
             title: 'About Me',
