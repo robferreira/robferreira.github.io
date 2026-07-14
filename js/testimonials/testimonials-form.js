@@ -7,6 +7,8 @@ var TestimonialsForm = (function() {
 	var submitBtn;
 	var statusEl;
 	var charCountEl;
+	var toggleBtn;
+	var collapseEl;
 	var isSubmitting = false;
 
 	function t(key) {
@@ -262,6 +264,52 @@ var TestimonialsForm = (function() {
 		}
 	}
 
+	function isFormOpen() {
+		return !!(toggleBtn && toggleBtn.getAttribute('aria-expanded') === 'true');
+	}
+
+	function setFormOpen(open) {
+		if (!toggleBtn || !collapseEl) {
+			return;
+		}
+
+		if (open) {
+			collapseEl.hidden = false;
+			toggleBtn.setAttribute('aria-expanded', 'true');
+			toggleBtn.classList.add('is-open');
+			window.requestAnimationFrame(function() {
+				collapseEl.classList.add('is-open');
+			});
+			window.setTimeout(function() {
+				if (nameInput && isFormOpen()) {
+					nameInput.focus();
+				}
+			}, 180);
+		} else {
+			collapseEl.classList.remove('is-open');
+			toggleBtn.setAttribute('aria-expanded', 'false');
+			toggleBtn.classList.remove('is-open');
+			window.setTimeout(function() {
+				if (!isFormOpen()) {
+					collapseEl.hidden = true;
+				}
+			}, 280);
+		}
+	}
+
+	function initToggle() {
+		toggleBtn = document.getElementById('testimonial-form-toggle');
+		collapseEl = document.getElementById('testimonial-form-collapse');
+
+		if (!toggleBtn || !collapseEl) {
+			return;
+		}
+
+		toggleBtn.addEventListener('click', function() {
+			setFormOpen(!isFormOpen());
+		});
+	}
+
 	function refreshLabels() {
 		if (!form) {
 			return;
@@ -290,6 +338,8 @@ var TestimonialsForm = (function() {
 		if (quoteInput) {
 			quoteInput.setAttribute('maxlength', String(getMaxQuoteLength()));
 		}
+
+		initToggle();
 
 		form.addEventListener('submit', handleSubmit);
 

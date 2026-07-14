@@ -17,7 +17,7 @@ var timelineJobsRaw = [
         start: '2020-09-16',
         end: '2026-03-31',
         active: false,
-        logo: 'images/experience/safra.jpg',
+        logo: 'images/experience/safra.png',
         key: 'safra'
     },
     {
@@ -25,7 +25,7 @@ var timelineJobsRaw = [
         start: '2017-05-16',
         end: '2020-09-14',
         active: false,
-        logo: 'images/experience/everis.jpg',
+        logo: 'images/experience/everis.png',
         key: 'everis',
         blocks: ['engineering', 'architecture']
     },

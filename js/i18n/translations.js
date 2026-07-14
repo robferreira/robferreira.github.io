@@ -13,7 +13,7 @@ var translations = {
         },
         hero: {
             role: 'Dados & IA',
-            bio: 'Hoje lidero Advanced Analytics e IA na Cielo, atuando com IA generativa, componentes reutilizáveis, arquiteturas de referência, segurança e performance. Minha experiência em dados e Big Data, desde 2016, sustenta essa atuação no setor financeiro.'
+            bio: 'Olá! Tenho <span id="my-age"></span> anos e atuo na área de tecnologia desde os 17. Atualmente, lidero iniciativas de Advanced Analytics e Inteligência Artificial na Cielo, com foco em IA generativa, desenvolvimento de componentes reutilizáveis, arquiteturas de referência, segurança e performance. Minha experiência com dados e Big Data, construída desde 2016, sustenta minha atuação em grandes projetos no setor financeiro.'
         },
         typewriter: ['Advanced Analytics', 'IA Generativa', 'Big Data', 'Fast Data'],
         about: {
@@ -62,6 +62,7 @@ var translations = {
             linkedin: 'LinkedIn',
             linkedinAria: 'Ver perfil de {name} no LinkedIn',
             form: {
+                openCta: 'Deixar meu depoimento',
                 nameLabel: 'Nome',
                 namePlaceholder: 'Seu nome',
                 quoteLabel: 'Depoimento',
@@ -157,7 +158,7 @@ var translations = {
         },
         hero: {
             role: 'Data & AI',
-            bio: 'Today I lead Advanced Analytics and AI at Cielo, working with generative AI, reusable components, reference architectures, security and performance. My experience in data and Big Data since 2016 supports this work in the financial sector.'
+            bio: 'Hello! I\'m <span id="my-age"></span> years old and have worked in technology since I was 17. I currently lead Advanced Analytics and Artificial Intelligence initiatives at Cielo, focusing on generative AI, reusable component development, reference architectures, security and performance. My experience with data and Big Data, built since 2016, supports my work on large projects in the financial sector.'
         },
         typewriter: ['Advanced Analytics', 'Generative AI', 'Big Data', 'Fast Data'],
         about: {
@@ -206,6 +207,7 @@ var translations = {
             linkedin: 'LinkedIn',
             linkedinAria: 'View {name}\'s LinkedIn profile',
             form: {
+                openCta: 'Leave my testimonial',
                 nameLabel: 'Name',
                 namePlaceholder: 'Your name',
                 quoteLabel: 'Testimonial',
