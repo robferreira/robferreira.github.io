@@ -52,7 +52,9 @@ var translations = {
                 emptyText: 'Os artigos podem ser acessados diretamente no Medium.',
                 emptyCta: 'Ver artigos no Medium',
                 minRead: '{min} min de leitura'
-            }
+            },
+            carouselAria: 'Artigos do blog',
+            carouselGoToPage: 'Ir para página {page}'
         },
         testimonials: {
             subheading: 'Depoimentos',
@@ -197,7 +199,9 @@ var translations = {
                 emptyText: 'Articles can be accessed directly on Medium.',
                 emptyCta: 'View articles on Medium',
                 minRead: '{min} min read'
-            }
+            },
+            carouselAria: 'Blog articles',
+            carouselGoToPage: 'Go to page {page}'
         },
         testimonials: {
             subheading: 'Testimonials',

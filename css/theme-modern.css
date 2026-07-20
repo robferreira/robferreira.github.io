@@ -766,7 +766,7 @@ a:hover, a:focus {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -779,6 +779,78 @@ a:hover, a:focus {
   #blog-section .blog-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+#blog-section .blog-carousel-shell {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+#blog-section .blog-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: 0;
+  margin-bottom: 0;
+  padding: 0.25rem 0 0.5rem;
+}
+
+#blog-section .blog-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+#blog-section .blog-page {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-inline: 4px;
+}
+
+@media (min-width: 992px) {
+  #blog-section .blog-page {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#blog-section .blog-page .blog-card {
+  min-width: 0;
+  margin: 0;
+}
+
+#blog-section .blog-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+#blog-section .blog-carousel-dots[hidden] {
+  display: none;
+}
+
+#blog-section .blog-carousel-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#blog-section .blog-carousel-dot.is-active,
+#blog-section .blog-carousel-dot:hover {
+  background: var(--accent);
+  transform: scale(1.15);
 }
 
 #blog-section .blog-card {
