@@ -1,7 +1,23 @@
 window.BLOG_POSTS_DATA = {
-  "generatedAt": "2026-07-12T16:15:57.122Z",
+  "generatedAt": "2026-07-20T14:25:56.019Z",
   "source": "https://medium.com/feed/@robinson_ferreira",
   "posts": [
+    {
+      "id": "https://medium.com/p/c3bc729f427f",
+      "title": "Dê uma Nova Vida ao seu PC Antigo com UmbrelOS",
+      "link": "https://medium.com/@robinson_ferreira/d%C3%AA-uma-nova-vida-ao-seu-pc-antigo-com-umbrelos-c3bc729f427f?source=rss-8b49f9f92571------2",
+      "publishedAt": "2026-07-20T14:12:27.000Z",
+      "excerpt": "Uma das coisas mais legais que se pode fazer com um computador antigo que talvez você não veja mais utilidade, é transformá-lo em um self-hosting. Self-hosting…",
+      "image": "https://cdn-images-1.medium.com/max/1024/1*c2Cfz9CLehb5QQE74NIztg.png",
+      "categories": [
+        "personal-cloud",
+        "self-hosting",
+        "umbrel",
+        "homelab",
+        "linux"
+      ],
+      "readingTime": 5
+    },
     {
       "id": "https://medium.com/p/25ed21d940ca",
       "title": "Introdução ao apache nifi montando fluxo fast data",
