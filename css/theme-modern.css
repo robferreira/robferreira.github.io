@@ -383,21 +383,19 @@ a:hover, a:focus {
   margin-top: 0.5rem;
 }
 
-@media (min-width: 992px) {
-  #about-section .pillars-carousel-shell {
-    padding-right: 3rem;
-  }
-}
-
 #about-section .pillars-scroll {
+  --carousel-peek: 2.75rem;
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  gap: 0;
-  padding: 0.25rem 0 0.5rem;
+  gap: 12px;
+  scroll-padding-inline: 0;
+  padding-block: 0.25rem 0.5rem;
+  /* Espaço extra no fim: permite alinhar a última página sem recortar a anterior */
+  padding-inline-end: var(--carousel-peek);
 }
 
 #about-section .pillars-scroll::-webkit-scrollbar {
@@ -405,7 +403,7 @@ a:hover, a:focus {
 }
 
 #about-section .pillars-page {
-  flex: 0 0 100%;
+  flex: 0 0 calc(100% - var(--carousel-peek));
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: grid;
@@ -413,7 +411,7 @@ a:hover, a:focus {
   gap: 12px;
   min-width: 0;
   box-sizing: border-box;
-  padding-inline: 12px;
+  padding-inline: 0;
 }
 
 #about-section .pillars-page--last {
@@ -787,15 +785,18 @@ a:hover, a:focus {
 }
 
 #blog-section .blog-scroll {
+  --carousel-peek: 2.75rem;
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  gap: 0;
+  gap: 12px;
+  scroll-padding-inline: 0;
   margin-bottom: 0;
-  padding: 0.25rem 0 0.5rem;
+  padding-block: 0.25rem 0.5rem;
+  padding-inline-end: var(--carousel-peek);
 }
 
 #blog-section .blog-scroll::-webkit-scrollbar {
@@ -803,7 +804,7 @@ a:hover, a:focus {
 }
 
 #blog-section .blog-page {
-  flex: 0 0 100%;
+  flex: 0 0 calc(100% - var(--carousel-peek));
   scroll-snap-align: start;
   scroll-snap-stop: always;
   display: grid;
@@ -811,7 +812,7 @@ a:hover, a:focus {
   gap: 1.5rem;
   min-width: 0;
   box-sizing: border-box;
-  padding-inline: 4px;
+  padding-inline: 0;
 }
 
 @media (min-width: 992px) {
