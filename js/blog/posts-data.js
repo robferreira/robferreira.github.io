@@ -1,7 +1,23 @@
 window.BLOG_POSTS_DATA = {
-  "generatedAt": "2026-07-20T14:25:56.019Z",
+  "generatedAt": "2026-07-22T02:24:25.544Z",
   "source": "https://medium.com/feed/@robinson_ferreira",
   "posts": [
+    {
+      "id": "https://medium.com/p/e7cc6582c254",
+      "title": "Transforme seu Homelab em uma Central de Mídia com UmbrelOS, Jellyfin e File Browser",
+      "link": "https://medium.com/@robinson_ferreira/transforme-seu-homelab-em-uma-central-de-m%C3%ADdia-com-umbrelos-jellyfin-e-file-browser-e7cc6582c254?source=rss-8b49f9f92571------2",
+      "publishedAt": "2026-07-22T02:18:16.000Z",
+      "excerpt": "No artigo Dê uma Nova Vida ao Seu PC Antigo com UmbrelOS , vimos como transformar um computador antigo em um servidor homelab. Agora, vamos aproveitar os…",
+      "image": "https://cdn-images-1.medium.com/max/1024/1*kkLV3irnnHz95xWs021nrQ.png",
+      "categories": [
+        "jellyfin",
+        "homelab",
+        "docker",
+        "self-hosting",
+        "umbrelos"
+      ],
+      "readingTime": 4
+    },
     {
       "id": "https://medium.com/p/c3bc729f427f",
       "title": "Dê uma Nova Vida ao seu PC Antigo com UmbrelOS",
