@@ -8,15 +8,26 @@ on:
     - cron: "0 9 * * *"
   workflow_dispatch:
 
+concurrency:
+  group: update-medium-posts
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
 jobs:
   update-posts:
     runs-on: ubuntu-latest
+    # Evita loop: o próprio commit do bot não precisa disparar outro fetch
+    if: >-
+      github.event_name != 'push' ||
+      github.event.head_commit.author.name != 'github-actions[bot]'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -39,5 +50,6 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "chore: update Medium posts"
-            git push
+            git pull --rebase origin master
+            git push origin HEAD:master
           fi
