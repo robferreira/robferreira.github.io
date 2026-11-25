@@ -10,7 +10,21 @@ var timelineJobsRaw = [
         end: null,
         active: true,
         logo: 'images/experience/cielo.png',
-        key: 'cielo'
+        key: 'cielo',
+        roles: [
+            {
+                key: 'manager',
+                start: '2026-11-01',
+                end: null,
+                active: true
+            },
+            {
+                key: 'consultant',
+                start: '2026-04-06',
+                end: '2026-10-31',
+                active: false
+            }
+        ]
     },
     {
         id: 'safra',
@@ -120,17 +134,21 @@ function formatDuration(totalMonths, lang) {
     var years = Math.floor(totalMonths / 12);
     var months = totalMonths % 12;
 
+    if (years === 0 && months === 0) {
+        return lang === 'pt' ? 'menos de 1 mês' : 'less than 1 month';
+    }
+
     if (lang === 'pt') {
         var parts = [];
         if (years > 0) parts.push(years + (years === 1 ? ' ano' : ' anos'));
         if (months > 0) parts.push(months + (months === 1 ? ' mês' : ' meses'));
-        return parts.join(' ') || '0 meses';
+        return parts.join(' ');
     }
 
     var enParts = [];
     if (years > 0) enParts.push(years + (years === 1 ? ' year' : ' years'));
     if (months > 0) enParts.push(months + (months === 1 ? ' month' : ' months'));
-    return enParts.join(' ') || '0 months';
+    return enParts.join(' ');
 }
 
 function formatPeriod(job, lang) {
@@ -277,9 +295,39 @@ function renderExperienceRow(job, lang, careerStart, careerEnd) {
     );
 }
 
+function renderRoleLadder(job, lang) {
+    if (!job.roles || !job.roles.length) return '';
+
+    var roles = job.roles.slice().sort(function(a, b) {
+        return parseDate(b.start) - parseDate(a.start);
+    });
+
+    var items = roles.map(function(role) {
+        var nodeClass = role.active
+            ? 'experience-role-node experience-role-node--active'
+            : 'experience-role-node';
+
+        return (
+            '<li class="experience-role">' +
+                '<span class="' + nodeClass + '"></span>' +
+                '<div class="experience-role-body">' +
+                    '<h6 class="experience-role-title">' + getJobTranslation(job.key, role.key) + '</h6>' +
+                    '<p class="experience-role-period">' + formatPeriod(role, lang) + '</p>' +
+                '</div>' +
+            '</li>'
+        );
+    }).join('');
+
+    return '<ol class="experience-roles">' + items + '</ol>';
+}
+
 function renderModalBody(job, lang) {
     var details = getJobDetails(job);
     var blocksHtml = '';
+    var hasRoles = job.roles && job.roles.length;
+    var roleHtml = hasRoles
+        ? ''
+        : '<h6 class="timeline-card-role">' + details.role + '</h6>';
 
     if (details.description) {
         blocksHtml += '<p class="timeline-card-text">' + details.description + '</p>';
@@ -293,8 +341,9 @@ function renderModalBody(job, lang) {
         '<div class="experience-modal-card glass-card">' +
             '<img class="timeline-card-logo" src="' + job.logo + '" alt="">' +
             '<h5 class="timeline-card-company">' + details.company + '</h5>' +
-            '<h6 class="timeline-card-role">' + details.role + '</h6>' +
+            roleHtml +
             '<p class="experience-modal-period">' + formatPeriod(job, lang) + '</p>' +
+            renderRoleLadder(job, lang) +
             blocksHtml +
         '</div>'
     );
