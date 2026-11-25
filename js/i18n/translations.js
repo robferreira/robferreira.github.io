@@ -118,7 +118,9 @@ var translations = {
         timeline: {
             cielo: {
                 company: 'CIELO S.A.',
-                role: 'GERENTE DE ADVANCED ANALYTICS E IA',
+                role: 'GERENTE DE ENGENHARIA DE DADOS E IA',
+                manager: 'Gerente de Engenharia de Dados e IA',
+                consultant: 'Consultor de Advanced Analytics e IA',
                 description: 'Liderança da área de Advanced Analytics e IA, com foco em experimentação em IA generativa, desenvolvimento de componentes e arquetipos reutilizáveis, e definição de arquiteturas, boas práticas, segurança e performance.'
             },
             safra: {
@@ -265,7 +267,9 @@ var translations = {
         timeline: {
             cielo: {
                 company: 'CIELO S.A.',
-                role: 'ADVANCED ANALYTICS & AI MANAGER',
+                role: 'DATA AND AI ENGINEERING MANAGER',
+                manager: 'Data and AI Engineering Manager',
+                consultant: 'Advanced Analytics and AI Consultant',
                 description: 'Leading the Advanced Analytics and AI area, focusing on generative AI experimentation, reusable components and archetypes, and defining architectures, best practices, security and performance.'
             },
             safra: {
